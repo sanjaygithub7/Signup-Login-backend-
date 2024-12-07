@@ -1,0 +1,50 @@
+Start
+  |
+  v
+Initialize Project (npm init, install dependencies)
+  |
+  v
+Setup MongoDB (connect to localhost or cloud)
+  |
+  v
+Configure Environment Variables (.env for sensitive info)
+  |
+  v
+Create User Schema (name, email, password) in Mongoose
+  |
+  v
+Add Password Hashing Logic (using bcrypt pre-save hooks)
+  |
+  v
+Create Signup Route
+  |
+  v
+Handle Signup Workflow:
+    - Validate user data
+    - Save user in DB
+  |
+  v
+Test Signup with Postman
+  |
+  v
+Create Login Route
+  |
+  v
+Handle Login Workflow:
+    - Find user by email
+    - Compare hashed passwords using(bcrypt.compare)
+  |
+  v
+Generate JWT Token on Successful Login
+  |
+  v
+Test Login with Postman
+  |
+  v
+Protect Routes Using Middleware (verify JWT tokens)
+  |
+  v
+Push Code to GitHub
+  |
+  v
+Done!
