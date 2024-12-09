@@ -8,6 +8,8 @@ exports.loginuser=async(req,res)=>{
     const {email,password}=req.body
 
     try{
+        
+        // if the email and password is found and matched then login successful
         const user= await usermodel.findOne({email})
         if(!user){
           return res.status(404).json({
@@ -20,7 +22,8 @@ exports.loginuser=async(req,res)=>{
         if(!validation){
            return res.status(401).json({ message: "Invalid credentials" });
         } 
-
+        
+        // genarating JWT token for authentication
         const token=jwt.sign({id:user._id,email:user.email},
                  process.env.JWT_SECRET,
             { expiresIn: process.env.JWT_EXPIRES_IN })
